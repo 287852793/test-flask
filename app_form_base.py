@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/7/27 14:44
 # @Author  : pyf
-# @File    : app_form_action.py
+# @File    : app_form_base.py
 # @Description : 表单处理(将表单数据发送到模板中返回)
 
 from flask import Flask, render_template, request
