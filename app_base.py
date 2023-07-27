@@ -7,12 +7,20 @@
 
 from flask import Flask
 
+# 这里的 __name__ 如果是外部调用，则是文件名 app_base ，如果是自己调用，则是 __main__
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+
+# 标准写法路径后面要加/
+# 这种情况下，访问地址后面无论加不加/都能正常访问，如果这里后面不加/，如果访问加了/就会报错
+@app.route('/python/')
+def hello_python():
+    return 'Hello, python!'
 
 
 # 支持多种 methods

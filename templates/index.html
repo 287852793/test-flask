@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+<h2>flask template</h2>
+<div style="color: red;">
+    <div>int param : {{ param_int }}</div>
+    <div>str param : {{ param_str }}</div>
+    <div>arr param : {{ param_arr }}</div>
+    <div>obj param : {{ param_obj }}</div>
+    <br>
+    <div>arr[0] : {{ param_arr[0] }}</div>
+    <div>obj.name : {{ param_obj.name }}</div>
+
+</div>
+</body>
+</html>
