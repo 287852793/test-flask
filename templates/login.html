@@ -9,6 +9,9 @@
     <p>username: <input type="text" name="username"></p>
     <p>password: <input type="password" name="password"></p>
     <p><input type="submit" value="登录"></p>
+    {% if errmsg %}
+    <p><strong>Error:</strong>{{ errmsg }}</p>
+    {% endif %}
 </form>
 </body>
 </html>
