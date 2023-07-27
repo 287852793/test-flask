@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-collapse: collapse; /*设置单元格的边框合并为1*/
+        }
+
+        th, td {
+            border-bottom: 1px solid #cccccc;
+            border-right: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <!--  奇怪的 for 循环  -->
+    {% for key, value in formdata.items() %}
+    <tr>
+        <th>{{ key }}</th>
+        <td>{{ value }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
