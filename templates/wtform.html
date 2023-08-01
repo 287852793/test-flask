@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wtform</title>
+</head>
+<body>
+<h2 style="text-align: center;">Contact Form</h2>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<p>{{ msg }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+{% for message in form.name_field.errors %}
+<div>{{ message }}</div>
+{% endfor %}
+
+{% for message in form.email_field.errors %}
+<div>{{ message }}</div>
+{% endfor %}
+
+<form action="/" method="post">
+    <fieldst>
+        <legend>Contact form</legend>
+        <!--防止跨域访问-->
+        {{ form.hidden_tag() }}
+
+        <div style="font-size: 20px; font-weight: bold; margin-left: 100px;">
+            {{ form.name_field.label }} <br> {{ form.name_field }}
+            <br>
+            {{ form.gender_field.label }} <br> {{ form.gender_field }}
+            <br>
+            {{ form.address_field.label }} <br> {{ form.address_field }}
+            <br>
+            {{ form.email_field.label }} <br> {{ form.email_field }}
+            <br>
+            {{ form.age_field.label }} <br> {{ form.age_field }}
+            <br>
+            {{ form.language_field.label }} <br> {{ form.language_field }}
+            <br>
+            {{ form.submit_field }}
+        </div>
+    </fieldst>
+</form>
+
+</body>
+</html>
