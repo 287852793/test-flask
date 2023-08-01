@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sijax test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/sijax/sijax.js"></script>
+    <script type="text/javascript">
+    <!-- 此处不能格式化，格式化就报错 -->
+        {{ g.sijax.get_js() | safe }}
+    </script>
+
+</head>
+<body>
+<a href="javascript://" onclick="Sijax.request('say_hello', ['zhangsan', 'lisi']);">say hello</a>
+<br>
+<a href="javascript://" onclick="Sijax.request('say_goodbye')">say goodbye</a>
+</body>
+</html>
